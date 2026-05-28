@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "gmail": { "type": "http", "url": "" },
+    "google calendar": { "type": "http", "url": "" },
+    "canva": { "type": "http", "url": "https://mcp.canva.com/mcp" },
+    "ahrefs": { "type": "http", "url": "https://api.ahrefs.com/mcp/mcp" },
+    "similarweb": { "type": "http", "url": "https://mcp.similarweb.com/mcp" }
+  }
+}
