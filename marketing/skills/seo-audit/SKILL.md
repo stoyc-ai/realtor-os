@@ -1,123 +1,123 @@
 ---
 name: seo-audit
 description: >
-  Audit a real estate agent's website for search ranking — both traditional Google SEO and AI-search
-  (GEO: ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude) — and return prioritized, specific
-  fixes. Use when the agent says "audit my website", "SEO audit", "how's my site for SEO", "check my
-  site for AI search", "improve my Google ranking", "GEO audit", "why am I not ranking", or gives a
-  website URL to review. Reads the live site via web search and tailors fixes to their market.
+  Audit a real estate agent's website for getting found — on Google AND in AI assistants (ChatGPT,
+  Perplexity, Google's AI answers, Gemini, Claude) — and explain, in plain English, what's costing
+  them leads and exactly what to fix. Use when the agent says "audit my website", "SEO audit", "how's
+  my site for SEO", "check my site for AI search", "improve my Google ranking", "why am I not ranking",
+  or gives a website URL. Reads the live site and tailors everything to their market.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
-# Website SEO + AI-Search (GEO) Audit
+# Website Audit — Getting Found on Google & AI (for real estate agents)
 
-Crawl the agent's live website, diagnose what's holding back their ranking in **both** Google and
-**AI search engines**, and hand them a prioritized punch list of specific, do-this fixes — tailored
-to their brokerage, market, and niche. Think of it as the website equivalent of the Google Business
-Profile audit.
+Look at the agent's website the way Google and AI assistants do, then tell them — **in plain English,
+like a smart friend who does this for a living** — what's quietly costing them leads and exactly what
+to do about it. This is written for a busy agent, not a web developer.
+
+## The golden rule: write for the agent, not for a developer
+
+The agent is a real estate professional, not a coder. So:
+
+- **Lead with the money/lead impact, not the technical term.** Not "missing JSON-LD schema" → instead "Google and AI assistants can't tell who you are or where you work, so they don't recommend you. Here's the fix."
+- **Explain or avoid jargon.** If you must use a term, define it in 5 words: *SEO = showing up on Google. AI search = showing up when someone asks ChatGPT. Schema = code that tells Google/AI exactly who you are. NAP = your name, address & phone matching everywhere.*
+- **Tag every fix with who does it + how hard.** Use these tags so the agent knows what's on them vs. what to hand off:
+  - `[✅ You — ~5 min]` something they can do themselves today (e.g. finish their Google Business Profile, add a headshot + bio, collect a testimonial).
+  - `[🤝 We can do it]` STOYC/marketing can handle it (copy, pages, content).
+  - `[🧑‍💻 Web person — ~30 min]` a developer/web-platform task (code, redirects, speed). Put the actual code in the appendix so the agent just forwards it.
+- **Always connect to a real outcome:** more calls, more leads, showing up for "[their area] homes for sale," getting named when a buyer asks an AI "who's a good agent in [area]?"
 
 ## How it works
 
 ```
 ALWAYS (works standalone)
   ✓ Agent gives their website URL (or it's in their profile)
-  ✓ Read the homepage + key pages via web search, analyze SEO + GEO, return a graded report
+  ✓ Read the homepage + key pages, then explain what's costing leads and what to fix — in plain English
 SUPERCHARGED (when connected)
-  + get_my_profile: target their real service areas, neighborhoods, niche, brokerage
-  + Ahrefs / SimilarWeb: real keyword, backlink, and traffic metrics instead of qualitative reads
-  + Google Business Profile (~~gbp): cross-check NAP + local consistency
+  + get_my_profile: target their real areas, neighborhoods, niche, name, brokerage
+  + Ahrefs / SimilarWeb: real traffic/keyword numbers instead of estimates
+  + Google Business Profile (~~gbp): check their Google listing is complete + consistent
 ```
 
 ## Before you start
 
-1. **Load context.** Call `get_my_profile` for the agent's **brokerage, service areas, target
-   neighborhoods, niche, and name** (fallback `CLAUDE.md`). Recommendations must target *their* real
-   market (e.g. "Willow Glen homes for sale"), not generic advice. If unknown, ask.
-2. **Get the URL.** If not provided or in the profile, ask: "What's your website address?"
-3. **Read the site.** Use web search/fetch to read the homepage and the key pages you can find:
-   About/agent bio, service-area/neighborhood pages, listings/IDX, blog, contact. Note what actually
-   exists — never assume or invent pages.
+1. **Load context.** Call `get_my_profile` for the agent's **name, brokerage, service areas, target neighborhoods, and niche** (fallback `CLAUDE.md`). Every recommendation should name *their* real market (e.g. "show up for 'Willow Glen homes for sale'"), not generic advice. If unknown, ask 1–2 quick questions.
+2. **Get the URL** if it's not provided or saved.
+3. **Read the site** (homepage, About, area/neighborhood pages, listings/home-search, contact, blog). Only describe what's actually there — never invent pages or numbers.
 
-## What to evaluate
+## What to look at (translate each into plain agent language)
 
-Score each area (A–F) and find concrete issues. Be specific to what you observed on the site.
+For each, find the issue, say **why it costs them leads**, and give a tagged fix.
 
-**1. Technical foundation** — HTTPS, mobile-friendliness, obvious speed issues, sitemap/robots, indexability, broken links, duplicate/thin pages, canonical/URL hygiene.
-
-**2. On-page SEO** — page titles & meta descriptions (present? unique? keyword + location?), one clear H1 per page, heading structure, content depth, image alt text, internal linking, clear CTAs.
-
-**3. Local SEO (highest leverage for agents)** — NAP (name/address/phone) present and consistent with their Google Business Profile; dedicated **location/neighborhood pages** for their farm areas; local keywords in titles/content; embedded map; reviews/testimonials on-site; links to/from GBP.
-
-**4. Structured data (schema.org JSON-LD)** — this powers both rich results AND AI extraction. Check for / recommend: `RealEstateAgent` or `LocalBusiness`, `Person` (the agent), `Organization` (brokerage), `RealEstateListing`/`Product` for listings, `FAQPage`, and `Review`/`AggregateRating`. Most agent sites have none — flag it.
-
-**5. E-E-A-T & trust** — real agent bio with credentials/experience, named team, testimonials, license #, clear contact, original local insight (not boilerplate). Google and AI engines both weight demonstrated expertise.
-
-**6. AI-search / GEO** — how citable the site is to LLM answer engines:
-   - **Clear, factual, self-contained statements** an AI can quote ("Jane Smith is a Compass agent specializing in first-time buyers in Willow Glen, San Jose").
-   - **Entity clarity** — who they are, where they serve, what they specialize in, stated plainly and consistently.
-   - **FAQ-style content** answering real buyer/seller questions ("How much do I need for a down payment in [area]?") — AI engines pull these directly.
-   - **Schema** (above) so engines can extract facts reliably.
-   - **Topical authority** — depth on their specific neighborhoods/markets, with real local data and named places.
-   - **AI crawler access** — `robots.txt` shouldn't block `GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended` if they want to be cited; consider an `llms.txt`.
-   - **Off-site entity consistency** — same NAP/bio across GBP, Zillow/Realtor profiles, socials (reinforces the entity for AI).
-
-**7. Conversion/UX** — obvious lead capture, IDX/home search, mobile CTAs, fast path to contact.
+- **Do you show up on Google for your area?** Page titles, the words on the page, and whether you have pages for the neighborhoods you farm. *(Most agents only rank for their own name — not "homes for sale in [area]".)*
+- **Your Google listing (local).** Is the Google Business Profile complete and does the website's name/address/phone match it? This drives the map results and "near me" searches. `[✅ You]` mostly.
+- **Can buyers/sellers actually do something?** Home search/IDX, a clear "contact" or "book a call," your phone, lead capture. A pretty site that doesn't capture leads is a leak.
+- **Do you look trustworthy?** Your photo, a real bio, credentials, named client testimonials, recent sales. Google and AI both favor real, provable expertise.
+- **Will AI assistants recommend you?** (The new search — explain it.) More buyers/sellers ask ChatGPT, Perplexity, and Google's AI "who's a good agent in [area]?" To get named, your site needs clear, factual statements about who you are and where you work, an FAQ that answers real buyer/seller questions, and the behind-the-scenes "schema" code so AI can read you. Most agent sites are invisible here — big opportunity.
+- **The technical basics.** Site speed (slow = lower ranking + lost visitors), mobile, broken/missing pages, and that Google can find everything. Keep these brief and hand them off `[🧑‍💻 Web person]`.
 
 ## Output format
 
 ```markdown
-# SEO + AI-Search Audit — [website] · [date]
+# Your Website Audit — [site] · [date]
 
-**Overall: [grade]** | Google SEO: [grade] · Local SEO: [grade] · AI-Search (GEO): [grade]
+## The bottom line
+[2–3 plain sentences. Grade in human terms, e.g. "Your site looks great to people, but Google and
+AI assistants barely know you exist — which means you're missing leads from search. The good news:
+the biggest wins are a few one-time fixes, and most don't need a developer."]
 
-## Do these first (top 5)
-1. **[Fix]** — [why it matters: SEO and/or AI search] — [exact action]
-2. …
+Found-on-Google: [🟢/🟡/🔴 + one phrase]  ·  Google listing (local): [..]  ·  AI assistants: [..]
 
-## Findings by priority
+## What's costing you leads right now
+1. **[Plain-English problem]**
+   - What's happening: [plain, cite what you saw]
+   - Why it costs you: [leads/calls/visibility — concrete]
+   - Fix: [specific action] — `[✅ You — 5 min]` / `[🤝 We can do it]` / `[🧑‍💻 Web person]`
+2. …(top 3–5)
 
-### 🔴 Critical
-- **[Issue]** (Technical/On-page/Local/Schema/E-E-A-T/GEO)
-  - *Observed:* [what's on the site, cited]
-  - *Why:* [impact on Google and/or AI engines]
-  - *Fix:* [specific, copy-paste where possible — e.g. suggested title tag, a JSON-LD snippet, FAQ Q&As]
+## Quick wins you can do this week (no developer needed)
+- [ ] [✅ thing], e.g. "Finish your Google Business Profile — add hours, service areas, 10 photos, and your website link."
+- [ ] [✅ thing], e.g. "Add your headshot + a 3-sentence bio that says who you are and the areas you serve."
+- [ ] [✅ thing], e.g. "Ask 3 recent clients for a 2-sentence testimonial and add them with names."
 
-### 🟠 High
-- …
+## Get recommended by AI (the new way people search)
+[Plain explanation + whether they currently show up. Then 3–5 specific moves: e.g. "Add an FAQ
+answering the questions buyers actually ask in [area]" with example questions; "State plainly on your
+homepage who you are and where you work"; "We'll add the behind-the-scenes code so AI can read you."]
 
-### 🟡 Medium / quick wins
-- …
+## To hand to your web person
+A short, plain checklist of the technical items (speed, sitemap, page setup, the code blocks in the
+appendix). Frame it as "forward this section to whoever manages your website."
 
-## Suggested additions (tailored to your market)
-- Neighborhood pages to create: [their real areas]
-- FAQ topics to add (great for AI search): [5–8 real buyer/seller questions for their market]
-- Schema to add: [which types + a ready JSON-LD block]
+## Appendix — ready-to-paste code (for the web person)
+[Only here: sitemap/robots.txt guidance and JSON-LD schema blocks, fully filled in with the agent's
+real info. Clearly labeled so the agent can forward it without understanding it.]
 
-## Notes
-- Metrics are qualitative unless Ahrefs/SimilarWeb is connected.
-- Based on pages reachable at audit time ([date]); verify before publishing changes.
+## Want us to handle it?
+[Offer the obvious next steps tied to other skills — see Related skills.]
 ```
 
 ## Execution flow
 
-1. Load profile (areas/niche/brokerage) + get the URL.
-2. Read homepage + key pages via web search; record what exists (cite URLs).
-3. If Ahrefs/SimilarWeb connected, pull keyword/traffic/backlink metrics; else note qualitative.
-4. Score the 7 areas; collect specific issues with *Observed / Why / Fix*.
-5. Write ready-to-use fixes: suggested **title tags + meta descriptions**, **JSON-LD schema blocks**, and **FAQ Q&As** targeted to their real neighborhoods.
-6. Render the report (top-5 first, then by priority). Offer next steps below.
+1. Load profile (name/areas/niche) + the URL.
+2. Read the homepage + key pages; note what exists (cite URLs, dates).
+3. If Ahrefs/SimilarWeb connected, pull real numbers; else say estimates are qualitative.
+4. Find the issues, then **rewrite every one in plain agent language** with the lead/business impact and a who-does-it tag.
+5. Put the top 3–5 lead-costing issues first; collect the easy DIY items into "Quick wins"; move all code into the appendix.
+6. Fill schema/code blocks with the agent's **real** info (confirm anything uncertain — e.g. exact name — before putting it in code).
+7. End with concrete next steps they can say yes to.
 
 ## Guardrails
 
-- Only audit the agent's **own** site + public info. Cite what you observed; don't fabricate metrics or pages.
-- Recommend **ethical** SEO only (no cloaking, keyword stuffing, fake reviews).
-- Any sample content must follow **Fair Housing** (describe homes/areas, never target protected classes).
-- Be concrete: every finding gets an action the agent (or their web person) can actually do.
+- Only audit the agent's **own** site + public info. Cite what you saw; never invent pages, numbers, or facts. Flag anything uncertain (e.g. a name pulled from another source) and ask before publishing it in code.
+- Recommend **ethical** SEO only — no fake reviews, no tricks.
+- Any sample copy follows **Fair Housing**: describe the homes and areas, never target or describe people by protected class.
+- Keep it skimmable and encouraging — the agent should finish feeling "I know exactly what to do next," not overwhelmed.
 
 ## Related skills
 
-- **blog-seo** — write the SEO/GEO blog posts and FAQ content this audit recommends.
-- **single-property-page** — build optimized listing/landing pages.
-- **agent-bio** — strengthen the About page for E-E-A-T and entity clarity.
-- **gbp-manager** — fix the Google Business Profile side of local SEO.
+- **agent-bio** — write the About page / bio this audit recommends (E-E-A-T + AI clarity).
+- **blog-seo** — write the FAQ and blog content that gets you cited by Google and AI.
+- **single-property-page** — optimized listing/landing pages.
+- **gbp-manager** — fix and optimize the Google Business Profile (the local-search side).
