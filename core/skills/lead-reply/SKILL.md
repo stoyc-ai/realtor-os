@@ -30,14 +30,20 @@ SUPERCHARGED (when connected)
 
 ## Load first (every time)
 
-Before drafting, read the agent's saved files from the **selected working folder**:
+1. **Load the agent's voice.** Call the `get_my_profile` tool first — it returns the agent's brand
+   voice (tone, writing examples, sign-off, hashtags) + business info (brokerage, service areas,
+   niche, rules). Use it as the voice/style source. If it's unavailable or returns "No profile
+   configured," fall back to reading `voice-profile.md` and `CLAUDE.md` from the working folder; if
+   neither exists, ask the agent.
 
-1. **`voice-profile.md`** (from **learn-my-voice**) — write the reply in this voice: tone, rhythm,
-   emoji/hashtag habits, and especially the few-shot examples. If it's missing, draft in a warm,
-   plain-spoken default and suggest running **learn-my-voice** so future replies sound like them.
-2. **`CLAUDE.md`** (from **remember**) — honor operating rules: response-time expectations, email
-   sign-off, business facts (brokerage, service area, hours), and any "don't" rules (e.g. *don't
-   cold-text leads*). The sign-off in the draft comes from here.
+If you're falling back to the saved files in the **selected working folder**:
+
+- **`voice-profile.md`** (from **learn-my-voice**) — write the reply in this voice: tone, rhythm,
+  emoji/hashtag habits, and especially the few-shot examples. If it's missing, draft in a warm,
+  plain-spoken default and suggest running **learn-my-voice** so future replies sound like them.
+- **`CLAUDE.md`** (from **remember**) — honor operating rules: response-time expectations, email
+  sign-off, business facts (brokerage, service area, hours), and any "don't" rules (e.g. *don't
+  cold-text leads*). The sign-off in the draft comes from here.
 
 ## Fair Housing guardrail
 
@@ -104,7 +110,8 @@ agent's texting voice — still honoring any "don't cold-text" rule in `CLAUDE.m
 
 1. **Parse the request** — get the lead's name (or the pasted message). "reply to Sarah", "what
    should I say to this lead?", "answer this", etc.
-2. **Load voice + rules** — read `voice-profile.md` and `CLAUDE.md` from the working folder.
+2. **Load voice + rules** — call `get_my_profile` first; fall back to `voice-profile.md` and
+   `CLAUDE.md` from the working folder if it's unavailable or unconfigured.
 3. **Gather context** — find the contact (`fub_search_contacts` → `fub_get_contact`), pull activity
    (`fub_get_contact_activity`), and the Gmail thread. If nothing's connected, ask them to paste the
    message.

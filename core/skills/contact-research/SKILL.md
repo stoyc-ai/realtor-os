@@ -16,7 +16,8 @@ internal CRM history and pairs it with **cited, dated** public background, then 
 dossier with genuine conversation hooks and a clear next step. **Read-only** — it never writes to the
 CRM or anywhere else.
 
-Read `CLAUDE.md` first for the agent's business facts and rules (service area, niche, do/don'ts).
+Call `get_my_profile` (on `~~crm`) first for the agent's business facts and rules (service area,
+niche, do/don'ts); if it's unavailable or returns "No profile configured," fall back to `CLAUDE.md`.
 
 ## How it works
 
@@ -89,24 +90,25 @@ you) and note that connecting `~~crm` would add their internal history.
 
 ## Execution flow
 
-1. **Identify the contact.** Take the name/email from the agent. If `~~crm` is connected, run
+1. **Load business context.** Call `get_my_profile` first — it returns the agent's business info and rules. Honor any relevant rules (e.g. follow-up timing, hours, service areas). If it's unavailable or returns "No profile configured," fall back to `CLAUDE.md` in the working folder.
+2. **Identify the contact.** Take the name/email from the agent. If `~~crm` is connected, run
    `fub_search_contacts` to find the record. If it returns multiple matches, list them (name, stage,
    area) and ask which one — do not guess.
-2. **Pull the CRM record.** With the contact ID, call `fub_get_contact` for the snapshot fields and
+3. **Pull the CRM record.** With the contact ID, call `fub_get_contact` for the snapshot fields and
    `fub_get_contact_activity` for recent touches. Summarize stage, source, owner, timeline, and the
    last few interactions. These are *from your CRM* — stated as fact.
-3. **Search the web for public background.** Use Claude web search for: public real-estate history,
+4. **Search the web for public background.** Use Claude web search for: public real-estate history,
    employer/role, public social presence, and neighborhood/market context. Prefer authoritative
    sources (county/MLS-adjacent public records, LinkedIn, the person's own pages). Capture a source
    and date for each fact.
-4. **Verify and tag.** Cross-check anything that matters before stating it. Tag each web fact with
+5. **Verify and tag.** Cross-check anything that matters before stating it. Tag each web fact with
    its source and recency. Mark anything you couldn't confirm as *unverified*. Discard fabrications
    and any protected-class inferences (Fair Housing).
-5. **Build conversation hooks.** Turn the strongest, most natural facts into 2–3 genuine talking
+6. **Build conversation hooks.** Turn the strongest, most natural facts into 2–3 genuine talking
    points. Skip anything that would feel intrusive to mention out loud.
-6. **Recommend a next step.** Based on stage + activity, suggest one concrete action, and point to
+7. **Recommend a next step.** Based on stage + activity, suggest one concrete action, and point to
    `lead-reply` (to draft outreach) or `appointment-prep` (if a meeting is set).
-7. **Deliver the dossier** in the format above, keeping the *from your CRM* and *from the web (verify)*
+8. **Deliver the dossier** in the format above, keeping the *from your CRM* and *from the web (verify)*
    halves clearly separated so the agent always knows what's confirmed internally vs. what to double-check.
 
 ## Tips

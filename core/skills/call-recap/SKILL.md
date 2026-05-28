@@ -31,11 +31,13 @@ SUPERCHARGED (when connected)
 
 ## Before you start
 
-Read the agent's `CLAUDE.md` (saved by **remember**) and honor relevant rules — follow-up cadence
-(e.g. *"follow up within 1 hour"*, *"book the next touch within 24h"*), no-contact days, and how
-they label stages/tags. Use these to set sensible due dates on tasks and to phrase the recap.
+Load the agent's business context first: call `get_my_profile` (on `~~crm`) — it returns the agent's
+business info and rules. Honor relevant rules — follow-up cadence (e.g. *"follow up within 1 hour"*,
+*"book the next touch within 24h"*), no-contact days, and how they label stages/tags — to set
+sensible due dates on tasks and to phrase the recap. If it's unavailable or returns "No profile
+configured," fall back to the agent's `CLAUDE.md` (saved by **remember**) in the working folder.
 
-If a working folder / `CLAUDE.md` isn't present, proceed with sensible defaults.
+If neither a profile nor a `CLAUDE.md` is present, proceed with sensible defaults.
 
 ## Output format
 
@@ -85,7 +87,7 @@ invent items.
    the search returns multiple matches, ask the agent which one before going further. *Not connected:*
    skip straight to the recap and tell the agent to paste it into their CRM.
 3. **Draft the recap** using the **Output format** — Summary, Key Points, Sentiment/Stage signal, and
-   Next Steps as concrete, dated actions (apply `CLAUDE.md` cadence for due dates). Apply the Fair
+   Next Steps as concrete, dated actions (apply the loaded profile/`CLAUDE.md` cadence for due dates). Apply the Fair
    Housing guardrail.
 4. **Build the Proposed CRM updates** list (connected only): the note, an optional call log, follow-up
    task(s) with due dates, and a stage/tag update **only if** the conversation actually moved them.

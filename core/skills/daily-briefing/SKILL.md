@@ -29,13 +29,14 @@ SUPERCHARGED (when connected)
 
 ## Before you start
 
-Read the agent's `CLAUDE.md` (saved by the **remember** skill) first and honor relevant rules:
+Load the agent's business context first, then honor relevant rules:
 
+- **Call `get_my_profile`** (on `~~crm`) first — it returns the agent's business info and rules. If it's unavailable or returns "No profile configured," fall back to the agent's `CLAUDE.md` (saved by the **remember** skill) in the working folder.
 - **Follow-up timing** (e.g. "follow up with new leads within 1 hour") → escalate matching leads into #1 Priority or Suggested Actions.
 - **Office hours** → frame the day within them; don't suggest contacting before/after.
 - **No-contact days / channel rules** (e.g. "no Sundays", "email first, never cold-text") → suppress or rephrase any suggested outreach that would violate them.
 
-If no `CLAUDE.md` exists, proceed with sensible defaults and offer to save rules later via **remember**.
+If neither a profile nor a `CLAUDE.md` exists, proceed with sensible defaults and offer to save rules later via **remember**.
 
 ## Output format
 
@@ -79,7 +80,7 @@ If no `CLAUDE.md` exists, proceed with sensible defaults and offer to save rules
 
 ## Execution flow
 
-1. **Load rules.** Read `CLAUDE.md` for follow-up timing, office hours, and no-contact/channel rules. Note today's day of week against any no-contact days.
+1. **Load business context.** Call `get_my_profile` first — it returns the agent's business info and rules (follow-up timing, office hours, no-contact/channel rules). If it's unavailable or returns "No profile configured," fall back to `CLAUDE.md` in the working folder. Note today's day of week against any no-contact days.
 2. **Gather data.**
    - *Connected:* `fub_list_appointments` (today) and **Google Calendar** (today's events) → merge and de-dupe. `fub_list_tasks` → due today + overdue. `fub_list_leads` → new (created recently) + hot (high score / recent activity). For each flagged lead/contact, use `fub_get_contact` / `fub_get_contact_activity` to find last-touch date and flag anyone with no recent touch (stale). If Gmail is connected, surface unread from active leads and threads awaiting a reply.
    - *Not connected:* ask the agent to paste or list today's appointments, the deals they're focused on, and anything urgent. Build the briefing from that. (This is read-only — never write to the ~~crm.)

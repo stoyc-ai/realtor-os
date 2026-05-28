@@ -17,7 +17,8 @@ with just a name and meeting type, and gets sharper when the CRM and calendar ar
 **read-only** — it never writes to the CRM or calendar.
 
 Real estate appointment types this covers: **listing appointment, buyer consult, showing, open
-house, closing.** Read `CLAUDE.md` first for the agent's market, brokerage, niche, and rules.
+house, closing.** Call `get_my_profile` (on `~~crm`) first for the agent's market, brokerage, niche,
+and rules; if it's unavailable or returns "No profile configured," fall back to `CLAUDE.md`.
 
 ## How it works
 
@@ -108,31 +109,32 @@ carefully:
 
 ## Execution flow
 
-1. **Identify the appointment.**
+1. **Load business context.** Call `get_my_profile` first — it returns the agent's business info and rules. Honor any relevant rules (e.g. follow-up timing, hours, service areas). If it's unavailable or returns "No profile configured," fall back to `CLAUDE.md` in the working folder.
+2. **Identify the appointment.**
    - If Google Calendar is connected, find the matching upcoming event; pull time, location,
      attendees, and any description/notes.
    - If `~~crm` is connected, run `fub_list_appointments` to confirm the booked appointment and type.
    - If neither resolves it, ask the agent for meeting type + address.
-2. **Pull the contact + history.**
+3. **Pull the contact + history.**
    - `fub_search_contacts` to locate the person by name (confirm if multiple match).
    - `fub_get_contact` for profile, source, budget, timeline, tags.
    - `fub_get_contact_activity` for the last touches, prior appointments, and open items.
    - If `~~crm` isn't connected, ask the agent to paste what they have.
-3. **Research the property & neighborhood (web search).** Look up the subject address (public listing,
+4. **Research the property & neighborhood (web search).** Look up the subject address (public listing,
    recent sale, comps, schools, neighborhood). Cite sources and tag recency; flag anything unverified.
    Skip property research for a buyer consult with no property yet.
-4. **Research the person (web search, public info only).** Light check for context that helps the
+5. **Research the person (web search, public info only).** Light check for context that helps the
    conversation (profession, ties to the area). Cite sources; no private data.
-5. **Tailor to the meeting type:**
+6. **Tailor to the meeting type:**
    - **Listing appointment** — pricing/comps, seller motivation, marketing plan, commission objections.
    - **Buyer consult** — needs/wants, budget + financing, timeline, buyer-rep agreement, process.
    - **Showing** — property details, comps, why-this-home talking points, next-step (offer) questions.
    - **Open house** — neighborhood pitch, traffic/sign-in plan, likely walk-in questions.
    - **Closing** — final-walkthrough items, docs, funds, possession, post-close follow-up.
-6. **Synthesize the brief** using the output template. Combine CRM history + research into talking
+7. **Synthesize the brief** using the output template. Combine CRM history + research into talking
    points, smart questions, and likely objections. End with one clear "do this before the meeting"
    action.
-7. **Deliver** the brief and offer to refine ("want comps for a different radius?" / "add a fifth
+8. **Deliver** the brief and offer to refine ("want comps for a different radius?" / "add a fifth
    question?"). Do not write anything back to the CRM or calendar.
 
 ## Related skills

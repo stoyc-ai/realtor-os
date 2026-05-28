@@ -14,6 +14,20 @@ metadata:
 Capture how the agent actually writes so listings, social captions, emails, and lead replies sound
 like *them*, not generic AI. Produces a reusable `voice-profile.md` that every content skill reads.
 
+## How the profile is delivered
+
+There are two ways the voice profile reaches the content skills:
+
+- **Self-serve (this skill):** build and refine `voice-profile.md` in the agent's working folder
+  (the flow described below). The profile lives locally and every content skill reads it.
+- **Server-hosted (managed/agency clients):** for STOYC-managed clients the voice profile is
+  typically set **server-side** and delivered via the `~~crm` connector's `get_my_profile` tool, so
+  the client does nothing and there are no local files. Skills can read voice + business context
+  straight from `get_my_profile`.
+
+This skill is for **building or refining** that profile — either self-serve, or to generate a
+profile that STOYC then loads server-side for a managed client. Use it either way.
+
 ## How it works
 
 ```

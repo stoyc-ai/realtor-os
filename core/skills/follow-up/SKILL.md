@@ -29,12 +29,17 @@ SUPERCHARGED (when connected)
 
 ## Before drafting (always)
 
-1. Load `voice-profile.md` from the working folder so the message sounds like the agent. If it's
-   missing, write plainly and suggest running **learn-my-voice**.
-2. Read `CLAUDE.md` for follow-up rules and cadence — e.g. *"follow up within 1 hour"*,
-   *"no contact on Sundays"*, *"email first, never cold-text"*, sign-off. **Honor these.** If a rule
-   would block a send (e.g. it's Sunday and the agent said no Sunday contact), draft it anyway and
-   flag the timing.
+1. **Load the agent's voice.** Call the `get_my_profile` tool first — it returns the agent's brand
+   voice (tone, writing examples, sign-off, hashtags) + business info (brokerage, service areas,
+   niche, rules). Use it as the voice/style source. If it's unavailable or returns "No profile
+   configured," fall back to reading `voice-profile.md` and `CLAUDE.md` from the working folder; if
+   neither exists, ask the agent. When falling back: `voice-profile.md` (from **learn-my-voice**)
+   makes the message sound like the agent — if it's missing, write plainly and suggest running
+   **learn-my-voice**.
+2. Honor follow-up rules and cadence — e.g. *"follow up within 1 hour"*, *"no contact on Sundays"*,
+   *"email first, never cold-text"*, sign-off — from the profile (or `CLAUDE.md` on fallback).
+   **Honor these.** If a rule would block a send (e.g. it's Sunday and the agent said no Sunday
+   contact), draft it anyway and flag the timing.
 
 ## Mode A — single follow-up
 
@@ -93,7 +98,8 @@ Reply with names (or "draft all") and I'll write each follow-up.
 ## Execution flow
 
 1. Determine mode: a named contact → **Mode A**; "who do I need to follow up with" → **Mode B**.
-2. Load `voice-profile.md` and read `CLAUDE.md` (cadence, do/don't rules, sign-off).
+2. Call `get_my_profile` for voice + rules (cadence, do/don't rules, sign-off); fall back to
+   `voice-profile.md` and `CLAUDE.md` if it's unavailable or unconfigured.
 3. **Mode A:** resolve contact and pull history via `fub_search_contacts` /
    `fub_get_contact` / `fub_get_contact_activity`. **Mode B:** `fub_list_leads` +
    `fub_get_contact_activity` per lead, then rank against the cadence rule.

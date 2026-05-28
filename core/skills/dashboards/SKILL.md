@@ -31,10 +31,13 @@ connectors approved when they were created. Confirm it's connected before buildi
 
 ## Before you start
 
-Read the agent's `CLAUDE.md` (saved by the **remember** skill) for context the dashboards use:
-average sale price, average commission %, market/service area, pipeline stage names, and follow-up
-cadence. The Commission Forecast in particular needs sale price and commission % — pull them from
-`CLAUDE.md` or ask once and offer to save them via **remember**.
+First call `get_my_profile` on the `~~crm` connector to get the agent's business context — average
+sale price, average commission %, market/service area, niche — since for managed clients this is set
+server-side and needs no local setup. If `get_my_profile` is unavailable, fall back to reading the
+agent's `CLAUDE.md` (saved by the **remember** skill) for the same context plus pipeline stage names
+and follow-up cadence. The Commission Forecast in particular needs sale price and commission % —
+pull them from `get_my_profile`, then `CLAUDE.md`, or ask once and offer to save them via
+**remember**.
 
 If the CRM connector isn't connected, tell the agent: *"Connect your CRM first (Settings →
 Connectors) — a live dashboard can only read data from connectors that are approved when I build
