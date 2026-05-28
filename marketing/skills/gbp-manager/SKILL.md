@@ -13,12 +13,23 @@ metadata:
 
 # Google Business Profile Manager
 
-The Google Business Profile is one of an agent's highest-leverage local-SEO assets — and most leave
-it half-built. This skill writes **GBP posts** in their voice and audits the profile for
-completeness, returning specific fixes. When the **`~~gbp`** connector is live it can post/update
-directly — but posting is a **write**, so it always **drafts, shows, and confirms first**. Without the
-connector it degrades gracefully: it drafts the post and the optimization steps for the agent to
-paste into their GBP dashboard.
+Your Google Business Profile (your free Google listing — the box with your name, reviews, and map pin
+that shows up when people Google you) is one of the best ways to get found locally, and most agents
+leave it half-built. This skill writes **profile posts** in the agent's voice and checks the profile
+for what's missing, handing back specific fixes. When the **`~~gbp`** connector is connected it can
+post/update directly — but posting goes live, so it always **drafts, shows, and confirms first**.
+Without the connector it still works: it drafts the post and the to-do list for the agent to paste
+into their Google Business Profile.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
+> Note: throughout this skill, "GBP" means your Google Business Profile.
 
 ## How it works
 

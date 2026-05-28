@@ -16,6 +16,14 @@ Hand the agent a film-ready short-form script: a strong **hook**, a **scene-by-s
 voice** and built for 20–45 seconds of vertical video. Works for a listing tour, a tip, or a market
 take. Draft-only.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How it works
 
 ```
@@ -53,7 +61,7 @@ the property, not the buyer. Don't script unverified claims or numbers — mark 
 - **20–45 seconds total**, 4–7 scenes; one idea per scene; keep VO tight (people read captions).
 - **On-screen text** for every scene (most viewers watch muted) — short, punchy.
 - **B-roll/shot notes** so it's actually filmable (what to point the camera at).
-- **Caption + hashtags** that work for Reels/TikTok/Shorts; a clear CTA (DM, link in bio, "follow for
+- **Caption + hashtags** that work for Reels/TikTok/Shorts; a clear ask (DM, link in bio, "follow for
   more [area] real estate").
 
 ## Output format

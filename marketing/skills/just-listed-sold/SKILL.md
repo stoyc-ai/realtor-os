@@ -15,6 +15,14 @@ Produce the four core announcement posts agents run all year: **just-listed**, *
 **coming-soon**, and **open-house**. Each comes back as per-platform copy with hashtags, in **the
 agent's voice**, ready to paste (and a visual idea to hand to Canva). Draft-only — never posts.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How it works
 
 ```
@@ -46,12 +54,12 @@ the property and the milestone, not the people. Don't invent facts — mark unkn
 ## Announcement types (what each needs)
 
 - **Coming soon** — build anticipation; tease the best feature, *don't* over-share; "hitting the
-  market soon," a "DM for first look" CTA. Note any MLS coming-soon rules belong to the agent.
-- **Just listed** — celebrate it's live; lead with the hook, key specs, price, and a clear CTA (book
+  market soon," a "DM for first look" ask. Note any MLS coming-soon rules belong to the agent.
+- **Just listed** — celebrate it's live; lead with the hook, key specs, price, and a clear ask (book
   a showing / link in bio).
-- **Open house** — date, time, address; what to expect; "swing by" CTA; create urgency.
+- **Open house** — date, time, address; what to expect; "swing by" ask; create urgency.
 - **Just sold** — gratitude + social proof (not buyer details); "another one closed," a soft "thinking
-  of selling?" CTA. For listings the agent *sold*, keep it about the result, not the people.
+  of selling?" ask. For listings the agent *sold*, keep it about the result, not the people.
 
 ## Output format
 
@@ -78,7 +86,7 @@ Hashtags: #[...] (3–5)
 ```
 
 (For **open house**, lead every caption with the date/time/address. For **coming soon**, keep
-specifics light and push the "first look" CTA.)
+specifics light and push the "first look" ask.)
 
 ## Execution flow
 

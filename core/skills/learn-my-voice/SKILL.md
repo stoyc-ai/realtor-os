@@ -14,6 +14,14 @@ metadata:
 Capture how the agent actually writes so listings, social captions, emails, and lead replies sound
 like *them*, not generic AI. Produces a reusable `voice-profile.md` that every content skill reads.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How the profile is delivered
 
 There are two ways the voice profile reaches the content skills:
@@ -33,7 +41,7 @@ profile that STOYC then loads server-side for a managed client. Use it either wa
 ```
 ALWAYS (works standalone)
   ✓ Agent pastes samples (best captions, a listing, a couple of emails, their bio)
-  ✓ Output: a structured voice profile + a few-shot examples library
+  ✓ Output: a structured voice profile + a library of their real writing samples
 SUPERCHARGED (when connected)
   + Google Drive / Gmail: pull existing listings, newsletters, sent emails as samples
 ```
@@ -78,7 +86,7 @@ relative path). If no working folder is selected, ask them to pick one first.
 ## Audience & niche
 - [who they serve, what market]
 
-## Few-shot examples (verbatim — the most important section)
+## Real writing samples (word-for-word — the most important section)
 > [Paste 5–8 of their actual best posts/snippets here, unedited. Content skills mimic these.]
 
 ## Fair Housing guardrail

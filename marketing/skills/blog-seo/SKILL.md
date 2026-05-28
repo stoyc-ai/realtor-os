@@ -12,10 +12,18 @@ metadata:
 
 # SEO + AI-Search (GEO) Blog Post
 
-Write a genuinely useful, search-optimized blog post that ranks on Google **and** gets cited by AI
-answer engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude) — in *the agent's* voice,
-about *their* market. This is the content engine behind a **seo-audit**: it produces the citable,
-entity-clear, FAQ-rich articles that audit recommends. Output is paste-ready for Webflow or WordPress.
+Write a genuinely useful blog post that shows up high on Google **and** gets quoted by AI answer
+tools (ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude) — in *the agent's* voice, about
+*their* market. This is the content engine behind a **seo-audit**: it produces the kind of clear,
+quotable, FAQ-rich articles that audit recommends. Output is ready to paste into Webflow or WordPress.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
 
 ## How it works
 
@@ -39,20 +47,21 @@ SUPERCHARGED (when connected)
    advice. If unavailable / "No profile configured," fall back to `voice-profile.md` and `CLAUDE.md`;
    if neither exists, ask for voice + area/niche.
 
-## GEO principles (apply throughout — from seo-audit)
+## What makes AI tools quote the post (apply throughout — from seo-audit)
 
-This is what makes the post citable by AI engines, not just rank on Google:
+This is what gets the post quoted by AI answer tools, not just ranked on Google:
 
-- **Citable facts** — write clear, factual, self-contained statements an AI can lift verbatim ("The
-  median down payment for first-time buyers in [area] is [X]"). Back numbers with a cited source.
-- **Entity clarity** — state plainly and consistently who the agent is, where they serve, and what
-  they specialize in. Tie the post back to the agent as the local authority.
-- **FAQ content** — a real FAQ section answering the actual questions buyers/sellers ask; AI engines
-  pull these directly into answers. Phrase headings as natural questions.
-- **Schema** — include a `FAQPage` (and where relevant `Article` / `BlogPosting`) JSON-LD note so
-  engines extract facts reliably.
-- **Topical authority** — depth on their specific neighborhoods/markets with real, named local data.
-- **One clear H1, descriptive H2s** — scannable structure for both crawlers and LLMs.
+- **Quotable facts** — write clear, factual, stand-alone statements an AI can copy word-for-word ("The
+  median down payment for first-time buyers in [area] is [X]"). Back numbers with a named source.
+- **Be clear about who they are** — state plainly and consistently who the agent is, where they work,
+  and what they specialize in. Tie the post back to the agent as the local expert.
+- **A real FAQ section** answering the actual questions buyers/sellers ask; AI tools pull these
+  straight into their answers. Phrase the headings as natural questions.
+- **Schema** (code that tells Google/AI what the page is) — include a `FAQPage` note (and where
+  relevant `Article` / `BlogPosting`) so the search engines read the facts reliably. This is for the
+  agent's web person; keep the code in the labeled block below.
+- **Go deep on their own area** — real, named local data on their specific neighborhoods/markets.
+- **One clear main heading, descriptive sub-headings** — easy to scan for both readers and AI tools.
 
 ## Research the topic (cite everything)
 
@@ -113,7 +122,9 @@ reader equally.
 
 ---
 
-## Suggested JSON-LD schema (paste into <head> or CMS custom code)
+## Suggested schema — for your web person (paste into <head> or CMS custom code)
+> Schema = a snippet of code that tells Google/AI what's on the page. Hand this to whoever manages
+> your site; you don't need to touch it yourself.
 \`\`\`json
 {
   "@context": "https://schema.org",

@@ -1,10 +1,19 @@
 {
   "name": "realtor-os-marketing",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Marketing engine for real estate agents: listings, social, newsletters, blogs, ads, and a content calendar in the agent's voice; Google Business Profile + review management; and a website SEO/GEO audit agent. Voice + business info come from the connector profile.",
   "author": {
     "name": "STOYC",
     "url": "https://stoyc.com"
   },
-  "keywords": ["real-estate", "marketing", "content", "seo", "geo", "google-business-profile", "social", "cowork"]
+  "keywords": [
+    "real-estate",
+    "marketing",
+    "content",
+    "seo",
+    "geo",
+    "google-business-profile",
+    "social",
+    "cowork"
+  ]
 }

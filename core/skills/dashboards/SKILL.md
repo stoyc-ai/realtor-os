@@ -12,10 +12,18 @@ metadata:
 # Dashboards
 
 Turn the agent's CRM into living, glanceable dashboards. This skill generates **Cowork live
-artifacts** — persistent, interactive HTML dashboards saved in the **Live artifacts** sidebar that
-pull **fresh data** from the `~~crm` via MCP every time they're opened (no prompt, no token cost on
-refresh), remember their filters across sessions, and keep version history. They are **read-only** —
-dashboards never write to the CRM.
+artifacts** — live dashboards that save in Cowork (in the **Live artifacts** sidebar) and refresh
+themselves, pulling **fresh data** from the CRM every time they're opened (no re-prompting, no cost
+on refresh), remembering their filters across sessions, and keeping a version history. They are
+**read-only** — dashboards never change anything in the CRM.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
 
 ## How it works
 
@@ -40,8 +48,8 @@ pull them from `get_my_profile`, then `CLAUDE.md`, or ask once and offer to save
 **remember**.
 
 If the CRM connector isn't connected, tell the agent: *"Connect your CRM first (Settings →
-Connectors) — a live dashboard can only read data from connectors that are approved when I build
-it,"* then proceed once it's connected.
+Connectors) — a live dashboard can only pull data from a CRM that's connected before I build it,"*
+then proceed once it's connected.
 
 ## The four dashboards
 
@@ -117,7 +125,7 @@ Projected commission by expected close — clearly labeled as an estimate.
 6. **Persist state.** Use the live-artifact storage to remember the dashboard's filters/selections
    (stage, source, assumptions, sort) across sessions.
 7. **Hand off.** Tell the agent it's saved in the **Live artifacts** sidebar, refreshes
-   automatically (short cache + the Refresh button), and costs no tokens to re-open.
+   automatically (and there's a **Refresh** button), and is free to re-open anytime.
 
 ## Aesthetic & build notes
 

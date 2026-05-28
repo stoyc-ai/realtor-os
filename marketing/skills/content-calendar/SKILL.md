@@ -12,11 +12,19 @@ metadata:
 
 # Content Calendar
 
-Hand the agent a ready-to-execute posting plan — dates, platforms, content types, and a hook for
-each slot — built around *their* market, niche, and the season. It's a **planning** skill: it
-produces the calendar (a table they can copy, save, and iterate on). It doesn't publish anything;
-each row is a brief that other skills (just-listed-sold, reels-script, market-update-post, etc.) can
+Hand the agent a ready-to-go posting plan — dates, where to post, what kind of post, and an opening
+line for each — built around *their* market, niche, and the time of year. It's a **planning** skill:
+it produces the calendar (a table they can copy, save, and adjust). It doesn't publish anything; each
+row is a quick brief that other skills (just-listed-sold, reels-script, market-update-post, etc.) can
 turn into the actual post.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
 
 ## How it works
 

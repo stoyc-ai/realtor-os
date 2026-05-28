@@ -12,11 +12,21 @@ metadata:
 
 # Review Response
 
-Reviews are local-SEO fuel and social proof — but a tone-deaf reply (especially to a negative one)
-does real damage. This skill drafts replies that sound like *the agent*, handles positive and
-negative reviews very differently, and writes review-request messages to send happy clients. It
-**drafts first, shows the reply, and posts via `~~gbp` only on explicit confirmation**. Without the
-connector, the agent pastes the review and copies the reply into their GBP dashboard.
+Reviews help you get found on Google and win trust — but a tone-deaf reply (especially to a bad one)
+does real damage. This skill drafts replies that sound like *the agent*, handles good and bad reviews
+very differently, and writes messages the agent can send happy clients to ask for a review. It
+**drafts first, shows the reply, and posts via `~~gbp` only after the agent says yes**. Without the
+connector, the agent pastes in the review and copies the reply into their Google Business Profile.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
+> Note: throughout this skill, "GBP" means your Google Business Profile.
 
 ## How it works
 

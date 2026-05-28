@@ -16,6 +16,14 @@ Take one piece of content and adapt it into platform-native posts — not the sa
 times. Each platform gets copy written for *how people actually use it*, in **the agent's voice**,
 plus a concrete visual idea you can hand to Canva. Draft-only: it never posts anything.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How it works
 
 ```
@@ -48,12 +56,12 @@ the buyer. Don't invent facts; mark unknowns as `[fill in: …]`.
 ## Per-platform intent
 
 - **Instagram** — visual-first; punchy hook in the first line, scannable, emoji if it fits their
-  voice, a clear CTA (DM / link in bio), 8–15 niche + local hashtags.
-- **Facebook** — slightly longer, conversational, community tone; a question or CTA that invites
+  voice, a clear ask (DM / link in bio), 8–15 niche + local hashtags.
+- **Facebook** — slightly longer, conversational, community tone; a question or ask that invites
   comments; 0–3 hashtags (FB rewards conversation, not tags).
 - **LinkedIn** — professional, insight-led; lead with a takeaway or market angle, not a hard sell;
   no emoji-heavy style; 3–5 broad professional/local hashtags.
-- **Instagram Story** — ultra-short on-frame text + a sticker/CTA idea (poll, link, "DM ME"); built
+- **Instagram Story** — ultra-short on-frame text + a sticker/ask idea (poll, link, "DM ME"); built
   to be skimmed in 2 seconds.
 
 ## Output format
@@ -102,8 +110,8 @@ Sticker/CTA: [poll / link / "DM ME" / countdown]
 
 ## Related skills
 
-- **listing-copy** — generate the source listing description this repurposes.
+- **listing-copy** — generate the source listing description this reuses.
 - **just-listed-sold** — for announcement-style posts (just listed / sold / coming soon / open house).
 - **reels-script** — turn the same input into a short-form video script.
-- **content-calendar** — schedule the repurposed posts across the week.
+- **content-calendar** — schedule the reused posts across the week.
 - **learn-my-voice** — builds/updates the `voice-profile.md` this skill writes from.

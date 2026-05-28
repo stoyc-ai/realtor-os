@@ -13,11 +13,19 @@ metadata:
 
 # Single-Property Landing Page
 
-Write the complete copy for a single-listing website — the standalone page agents spin up for a new
-listing — in *the agent's* voice, optimized so it converts buyers and gets surfaced in search/AI.
-Output is sectioned and paste-ready for Webflow or WordPress, with a schema suggestion. This is a
-**draft-only** skill and **Fair Housing is critical** here: a public listing page is exactly where
-steering language gets agents in trouble.
+Write the complete copy for a single-listing website — the standalone page agents put up for a new
+listing — in *the agent's* voice, written to win over buyers and to show up in Google and AI search.
+Output is split into sections and ready to paste into Webflow or WordPress, with a schema suggestion
+for the web person. This is a **draft-only** skill, and **Fair Housing is critical** here: a public
+listing page is exactly where the wrong wording gets agents in trouble.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
 
 ## How it works
 
@@ -102,7 +110,9 @@ attendance zone as a boundary fact. *[source, date]* for any stat. No quality/pe
 
 ---
 
-## Suggested JSON-LD schema (paste into the page head / CMS custom code)
+## Suggested schema — for your web person (paste into the page head / CMS custom code)
+> Schema = a snippet of code that tells Google/AI what's on the page (here: that it's a home for
+> sale). Hand this to whoever manages your site; you don't need to touch it.
 \`\`\`json
 {
   "@context": "https://schema.org",

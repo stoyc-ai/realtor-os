@@ -1,10 +1,17 @@
 {
   "name": "realtor-os-listings",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Listings & market intel for real estate agents: CMAs, market reports, property and neighborhood research, and buyer-match — researched live from the web with cited, verify-before-client guardrails. No MLS or paid data API required.",
   "author": {
     "name": "STOYC",
     "url": "https://stoyc.com"
   },
-  "keywords": ["real-estate", "cma", "market-report", "property-research", "buyer-match", "cowork"]
+  "keywords": [
+    "real-estate",
+    "cma",
+    "market-report",
+    "property-research",
+    "buyer-match",
+    "cowork"
+  ]
 }

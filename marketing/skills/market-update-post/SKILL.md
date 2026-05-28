@@ -15,6 +15,14 @@ Give the agent a ready-to-post market update for *their* market: a scroll-stoppi
 few **real, sourced** stats. Numbers come from web search and are always cited with a source and
 date — this skill **never fabricates figures**. Written in **the agent's voice**, draft-only.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How it works
 
 ```
@@ -72,7 +80,7 @@ their implication for buyers/sellers generally. Describe the market, not the peo
 ## Caption
 [Punchy, in the agent's voice. Open with a hook ("Is it still a seller's market in [area]? Here's
 what the numbers actually say…"), weave in the takeaway (what it means for buyers/sellers), close
-with a CTA (DM for a free home valuation / let's talk). Plain, scannable.]
+with a clear ask (DM for a free home valuation / let's talk). Plain, scannable.]
 
 Hashtags: #[Area]RealEstate #MarketUpdate #[...] (8–15 for IG; trim for other platforms)
 
@@ -97,7 +105,7 @@ Hashtags: #[Area]RealEstate #MarketUpdate #[...] (8–15 for IG; trim for other 
 2. **Load voice** — `get_my_profile` first; fall back to the saved files.
 3. **Research** — web search for 2–4 current stats for that exact area; record value, change, source,
    and date for each. Drop anything unverifiable.
-4. **Write the caption** in their voice — hook → takeaway → CTA — weaving in 2–3 of the stats.
+4. **Write the caption** in their voice — hook → takeaway → clear ask — weaving in 2–3 of the stats.
 5. **Self-check** — every number has a source + date; no fabricated figures; Fair Housing clean
    (facts, not steering).
 6. **Output** using the template, including the sourced stat list.

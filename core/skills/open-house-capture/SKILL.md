@@ -12,13 +12,22 @@ metadata:
 # Open House Capture
 
 The showcase feature: snap a photo of the paper sign-in sheet from this weekend's open house, and
-those handwritten rows become real leads in the agent's CRM — de-duped, tagged, and sourced —
-in under a minute. The agent reviews and fixes any handwriting misreads before anything is written.
+those handwritten rows become real leads in the agent's CRM — duplicates merged, tagged, and labeled
+with their source — in under a minute. The agent reviews and fixes any handwriting misreads before
+anything is saved.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
 
 ## How it works
 
 ```
-1. Claude reads the uploaded photo of the sign-in sheet via native vision (no OCR tool needed).
+1. Claude reads the uploaded photo of the sign-in sheet directly (no extra scanning tool needed).
 2. Parses each row into structured fields: First, Last, Email, Phone, Notes.
 3. Renders a numbered review table; flags low-confidence cells (handwriting) with a ⚠.
 4. The agent corrects misreads and confirms.

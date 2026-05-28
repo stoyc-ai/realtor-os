@@ -12,10 +12,18 @@ metadata:
 
 # Ad Copy
 
-Turn a campaign goal into platform-ready ad copy that sounds like *the agent* and fits the format
-each platform actually uses — Google search ads vs. Meta feed ads read very differently. This is a
-**writing-only** skill: it hands back copy for the agent to paste into Google Ads or Meta Ads
-Manager. It has **no ad-account integration** and never launches, edits, or spends on a campaign.
+Turn an ad goal into ready-to-use ad copy that sounds like *the agent* and fits where it's going —
+Google search ads and Facebook/Instagram ads read very differently. This is a **writing-only** skill:
+it hands back copy for the agent to paste into Google Ads or Meta Ads Manager. It is **not connected
+to any ad account** and never launches, edits, or spends money on an ad.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
 
 ## How it works
 

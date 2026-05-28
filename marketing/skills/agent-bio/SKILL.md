@@ -14,9 +14,18 @@ metadata:
 
 Write the agent's bio in *their* voice and from *their* real story — the short blurb for socials, the
 medium version for a directory profile, the long version, and a full About-page version built to win
-trust with both people and search engines. The About-page version is tuned for **E-E-A-T**
-(Experience, Expertise, Authoritativeness, Trust) and **entity clarity** — exactly what **seo-audit**
-flags on weak About pages. Drafts only.
+trust with both people and search engines. The About-page version is written to prove the agent is
+real, experienced, and trustworthy (Google calls this **E-E-A-T** — Experience, Expertise,
+Authority, Trust) and to make crystal clear who they are — exactly what **seo-audit** flags on weak
+About pages. Drafts only.
+
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
 
 ## How it works
 
@@ -43,18 +52,20 @@ SUPERCHARGED (when connected)
 in the profile and the agent doesn't give it, leave `[fill in: …]` — invented credentials are both a
 trust and a compliance problem.
 
-## E-E-A-T & entity clarity (for the About-page version — from seo-audit)
+## Prove you're real and trusted (for the About-page version — from seo-audit)
 
-- **Entity clarity** — state plainly and consistently who they are, where they serve, and what they
-  specialize in: "[Name] is a [brokerage] agent specializing in [niche] in [neighborhoods], [city]."
-  This exact-clarity sentence is what AI engines cite.
-- **Experience** — concrete tenure + lived local knowledge ("Lived in [area] for 12 years; closed
+Google and AI tools trust an About page that clearly proves the agent is experienced and legit. Cover:
+
+- **Be clear about who they are** — state plainly and consistently who they are, where they work, and
+  what they specialize in: "[Name] is a [brokerage] agent specializing in [niche] in [neighborhoods],
+  [city]." This one clear sentence is what AI tools quote.
+- **Experience** — real years in the business + local know-how ("Lived in [area] for 12 years; closed
   [X] homes there").
-- **Expertise** — named credentials, designations (ABR, CRS, SRS…), niche focus.
-- **Authoritativeness** — brokerage, affiliations, press, awards (only real ones).
-- **Trust** — license #, real contact, testimonials nearby, no inflated claims.
-- Use the agent's name + brokerage consistently (same NAP/entity as GBP/Zillow) to reinforce the
-  entity across the web.
+- **Expertise** — named credentials and designations (ABR, CRS, SRS…) and what they specialize in.
+- **Authority** — brokerage, memberships, press, awards (only real ones).
+- **Trust** — license #, real contact info, reviews nearby, no exaggerated claims.
+- Use the agent's name + brokerage exactly the same everywhere (same name, address, phone as their
+  Google Business Profile and Zillow) so the whole web agrees they're one and the same person.
 
 ## Fair Housing guardrail
 
@@ -107,7 +118,9 @@ public fact.]
 
 ---
 
-## Suggested JSON-LD schema (About page head / CMS custom code)
+## Suggested schema — for your web person (About page head / CMS custom code)
+> Schema = a snippet of code that tells Google/AI who you are. Hand this to whoever manages your
+> site; you don't need to touch it.
 \`\`\`json
 {
   "@context": "https://schema.org",

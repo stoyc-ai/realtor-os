@@ -15,6 +15,14 @@ Open the day with one scannable, prioritized view: the single most important thi
 appointments with quick context, new and hot leads, who needs a follow-up, and what's due. Works
 from whatever the agent gives you and gets sharper when the CRM, calendar, and email are connected.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How it works
 
 ```

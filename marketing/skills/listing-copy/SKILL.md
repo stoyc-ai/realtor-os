@@ -17,6 +17,14 @@ generic AI — and is safe to post on the MLS and anywhere else. Produces three 
 a **headline**, a **full MLS-style description**, and a **short/social variant**. This is a
 **draft-only** content skill: it writes the copy and hands it back.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How it works
 
 ```
@@ -82,7 +90,7 @@ Plain text — no markdown asterisks — so it pastes clean into the MLS. ~120�
 ---
 
 **Want this as graphics?** I can hand the short variant to Canva/Figma as caption text, or run
-**social-repurpose** to spin it into per-platform posts. Just say the word.
+**social-repurpose** to turn it into posts for each platform. Just say the word.
 ```
 
 ## Execution flow

@@ -16,6 +16,14 @@ Make the system smarter every time the agent corrects it or states a preference.
 should apply forever, automatically, across every skill — the agent should never have to repeat
 themselves.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## When this fires
 
 Automatically, whenever the agent expresses a durable instruction, not a one-off request:
@@ -31,8 +39,8 @@ If the agent is making a one-time request ("reply to this lead"), do **not** tre
 Two tiers, both saved in the agent's **selected working folder** (in Cowork the agent runs from a
 plugin cache directory, so always write to the working folder, never a relative path):
 
-- **`CLAUDE.md`** — hot cache, kept short (~50–80 lines). Holds business facts + the most important rules. Every skill reads this first.
-- **`memory/`** — deeper storage for detail and overflow (e.g. `memory/preferences.md`, `memory/business.md`). Grows without bloating the hot cache.
+- **`CLAUDE.md`** — the quick-reference file, kept short (~50–80 lines). Holds business facts + the most important rules. Every skill reads this first.
+- **`memory/`** — deeper storage for detail and extras (e.g. `memory/preferences.md`, `memory/business.md`). Grows without crowding the quick-reference file.
 
 > If no working folder is selected, tell the agent: *"Pick a working folder so I can save this and remember it next time,"* then proceed once they do (or save for this session only if they decline).
 

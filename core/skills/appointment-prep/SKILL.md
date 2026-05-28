@@ -16,6 +16,14 @@ Walk into any appointment knowing the person, the property, and exactly what to 
 with just a name and meeting type, and gets sharper when the CRM and calendar are connected. It is
 **read-only** — it never writes to the CRM or calendar.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 Real estate appointment types this covers: **listing appointment, buyer consult, showing, open
 house, closing.** Call `get_my_profile` (on `~~crm`) first for the agent's market, brokerage, niche,
 and rules; if it's unavailable or returns "No profile configured," fall back to `CLAUDE.md`.

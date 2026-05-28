@@ -16,6 +16,14 @@ internal CRM history and pairs it with **cited, dated** public background, then 
 dossier with genuine conversation hooks and a clear next step. **Read-only** — it never writes to the
 CRM or anywhere else.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 Call `get_my_profile` (on `~~crm`) first for the agent's business facts and rules (service area,
 niche, do/don'ts); if it's unavailable or returns "No profile configured," fall back to `CLAUDE.md`.
 

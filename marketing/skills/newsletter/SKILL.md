@@ -17,6 +17,14 @@ actually opens — written in *the agent's* voice and backed by **current, cited
 This is a **draft-only** skill: it writes the email and hands it back, formatted to paste straight
 into Mailchimp or Klaviyo. It never sends.
 
+## How to talk to the agent
+
+Write for a busy real estate agent — not a developer, marketer, or AI expert. Detailed but concise and skimmable:
+- **Plain language.** No technical or insider jargon. If a term is unavoidable, define it in a few plain words.
+- **Lead with what matters to them** — leads, listings, clients, money, time saved — not the mechanics behind it.
+- **Tight and scannable.** Short sentences, bullets, clear headers. Detailed enough to act on, never padded.
+- **End with the clear next step.**
+
 ## How it works
 
 ```
@@ -116,7 +124,7 @@ syntax for that platform). If neither is connected, output clean paste-ready tex
 2. **Load voice + market** — call `get_my_profile`; fall back to `voice-profile.md` / `CLAUDE.md`.
 3. **Research** — web search current stats for their real service area; capture source + date for each.
 4. **Draft in their voice** — 2–3 subject lines + preview text, then a sectioned body (snapshot →
-   meaning → soft CTA), honoring sign-off and the Fair Housing guardrail.
+   meaning → soft ask), honoring sign-off and the Fair Housing guardrail.
 5. **Format for the platform** — Mailchimp/Klaviyo merge tags + a paste guide; clean text if no
    connector.
 6. **Output the draft** using the template. Do **not** send.
