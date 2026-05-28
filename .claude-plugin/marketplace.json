@@ -1,0 +1,18 @@
+{
+  "name": "realtor-os",
+  "owner": {
+    "name": "STOYC"
+  },
+  "metadata": {
+    "description": "STOYC Realtor OS — a productized Claude plugin suite for real estate agents.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "core",
+      "displayName": "Realtor OS — Core",
+      "source": "./core",
+      "description": "Your daily command center: CRM-aware morning briefings, lead replies and follow-ups in your voice, appointment prep, contact research, open-house sign-in capture, and live dashboards. Includes voice personalization and a self-improving memory that learns your preferences."
+    }
+  ]
+}
