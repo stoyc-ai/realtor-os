@@ -14,7 +14,7 @@ GitHub marketplace; everything is markdown + JSON — no build step.
 ## Install (Claude Cowork)
 
 1. In Cowork open the plugin **Directory → Plugins → +  → Add marketplace**.
-2. Enter this repo: `STOYC/realtor-os` (or its git URL) → **Sync**.
+2. Enter this repo: `stoyc-ai/realtor-os` (or its git URL `https://github.com/stoyc-ai/realtor-os`) → **Sync**.
 3. Install **Realtor OS — Core** from the list.
 
 ## Connect your tools
@@ -26,10 +26,12 @@ See [`core/CONNECTORS.md`](core/CONNECTORS.md). In short:
 
 ## First-run onboarding (5 minutes)
 
-1. Connect the CRM + native connectors; pick a working folder.
-2. Run **learn-my-voice** — paste a few of your best captions/listings/emails.
-3. Tell it your basics ("my brokerage is…", "I serve…", "I never text leads") — **remember** saves them.
-4. Say **"start my day"** to see your briefing; **"open my dashboard"** for the command center.
+Just run **`/onboard`** (or say *"onboard me"*). Your assistant walks you through setup with
+clickable buttons — service areas & ZIP codes, price band, niche, voice & tone, and your rules —
+plus a spot to paste sample listings, emails, and captions so everything sounds like you. Pick a
+working folder when asked so it all persists.
+
+Then say **"start my day"** for your briefing, or **"open my dashboard"** for the command center.
 
 ## What's inside Core
 
