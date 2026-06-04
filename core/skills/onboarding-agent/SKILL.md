@@ -30,12 +30,19 @@ Write for a busy real estate agent — not a developer, marketer, or AI expert. 
 **Present every question that has set answers as clickable buttons using the `AskUserQuestion` tool**,
 not as plain text the agent has to read and type back. This is the whole point of the experience.
 
-- Each `AskUserQuestion` call can show **up to 4 questions at once**, each with **2–4 options**.
+- Each `AskUserQuestion` call can show **up to 4 questions at once**, each with **2–4 real options**.
 - Use `multiSelect: true` when more than one answer can apply (niche, lead sources, channels, tone, days off, rules).
 - Every question automatically gets an **"Other"** box, so the agent can type a custom answer anytime.
-- **Fields that are inherently free text** — exact ZIP codes, sign-off, writing samples, the catch-all —
-  are NOT forced into buttons. Capture those with a short paste prompt (or the "Other" box).
 - **Everything is skippable.** If they skip a screen, record nothing for it and move on — never block.
+
+> **HARD RULE — never call `AskUserQuestion` for a free-text-only question.** The tool requires
+> 2–4 predefined options; if you call it for an open "type it out" answer (no real options), it
+> **fails** with an error card. So the following are asked as a **normal chat message**, never as a
+> button card: **exact towns/neighborhoods + ZIP codes, sign-off, the writing samples, and the
+> "anything else" catch-all.** Only use `AskUserQuestion` for the choice questions that have set
+> options (brokerage, price band, area scope, languages, niche, lead sources, channels, tone, emoji,
+> follow-up speed, days off, hard rules). When in doubt — if you can't list 2–4 concrete tappable
+> options — just ask in plain text.
 
 ## Self-setup vs. STOYC-managed
 
@@ -89,8 +96,8 @@ be saved until this is done, so don't skip it. If they don't have one, suggest c
 3. **Service-area scope** — `1 town` · `2–3 towns` · `Whole county` · `Multi-county`.
 4. **Languages** — multi-select: `English` · `Spanish` · `Other`.
 
-Then a short **paste prompt** (free text): "Which exact towns/neighborhoods do you cover, and the ZIP
-codes? Just list them."
+Then, as a **normal chat message** (NOT an `AskUserQuestion` card — there are no options to tap):
+"Which exact towns/neighborhoods do you cover, and the ZIP codes? Just list them here — or skip."
 
 ### Step 2 — Who they serve  *(one AskUserQuestion call — 3 multi-select questions)*
 
