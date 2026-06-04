@@ -1,0 +1,18 @@
+{
+  "name": "realtor-os-prospecting",
+  "version": "1.0.0",
+  "description": "Proactive prospecting and sphere intelligence for real estate agents. Sphere Radar watches the people they know for the life and money moments that precede a move — verified from news, LinkedIn, and press — and drafts warm, no-ask outreach in the agent's voice. Voice + business info come from the connector profile.",
+  "author": {
+    "name": "STOYC",
+    "url": "https://stoyc.com"
+  },
+  "keywords": [
+    "real-estate",
+    "prospecting",
+    "sphere-of-influence",
+    "referrals",
+    "relationship-marketing",
+    "lead-generation",
+    "cowork"
+  ]
+}

@@ -25,6 +25,12 @@
       "displayName": "Realtor OS — Listings & Market Intel",
       "source": "./listings",
       "description": "CMAs, market reports, property and neighborhood research, and buyer-match — researched live from the web with cited, verify-before-client guardrails. No MLS required."
+    },
+    {
+      "name": "prospecting",
+      "displayName": "Realtor OS — Prospecting & Sphere",
+      "source": "./prospecting",
+      "description": "Sphere Radar watches the people you know for the life and money moments that come right before a move — a company sale, a new role in another city, a promotion, a new baby, an award — verifies them from news and public LinkedIn, and hands you a prioritized list with a warm, no-ask note ready to send in your voice. Be the agent who reaches out first. Runs on demand or every week on autopilot."
     }
   ]
 }

@@ -7,9 +7,10 @@ GitHub marketplace; everything is markdown + JSON — no build step.
 
 | Package | What it does | Status |
 |---------|--------------|--------|
-| **Core** | Daily command center — CRM-aware briefings, lead replies & follow-ups in the agent's voice, appointment prep, contact research, call recaps, open-house capture, and live dashboards. Plus voice personalization and self-improving memory. | ✅ This repo |
-| Marketing Engine | Content + Google Business Profile (separate spec) | Planned |
-| Listings & Market Intel | Web-search CMA / market intel (separate spec) | Planned |
+| **Core** | Daily command center — CRM-aware briefings, lead replies & follow-ups in the agent's voice, appointment prep, contact research, call recaps, open-house capture, and live dashboards. Plus guided onboarding, voice personalization, and self-improving memory. | ✅ This repo |
+| **Marketing, Content & SEO** | Listing marketing rollouts, social posts, newsletters, blogs, ads, content calendar, Google Business Profile + reviews, and a website SEO/GEO audit — all in the agent's voice. | ✅ This repo |
+| **Listings & Market Intel** | CMAs, market reports, property & neighborhood research, and buyer-match — researched live from the web with cited, verify-before-client guardrails. No MLS required. | ✅ This repo |
+| **Prospecting & Sphere** | Sphere Radar — watches your sphere for the life & money moments before a move (sale, relocation, promotion, new baby, award), verifies from news/LinkedIn, and drafts warm no-ask notes in your voice. On demand or weekly on autopilot. | ✅ This repo |
 
 ## Install (Claude Cowork)
 
