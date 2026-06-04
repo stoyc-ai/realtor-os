@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "STOYC Realtor OS — a productized Claude plugin suite for real estate agents.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
