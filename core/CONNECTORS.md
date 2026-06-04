@@ -20,7 +20,7 @@ There is **no native Follow Up Boss connector**, so the CRM is connected as a **
    - Leave OAuth fields blank → **Add**
 
 Once connected, these tools are available to the skills:
-`fub_search_contacts`, `fub_get_contact`, `fub_list_leads`, `fub_get_contact_activity`, `fub_list_tasks`, `fub_list_appointments`, `get_my_profile` (read — `get_my_profile` returns the agent's brand voice + business info: brokerage, service areas, niche, and operating rules) and `fub_add_note`, `fub_update_lead`, `fub_create_task`, `fub_log_call` (write — skills always confirm before writing).
+`fub_search_contacts`, `fub_get_contact`, `fub_list_leads`, `fub_get_contact_activity`, `fub_list_tasks`, `fub_list_appointments`, `get_my_profile` (read — `get_my_profile` returns the agent's brand voice + business info: brokerage, service areas, niche, and operating rules) and `fub_add_note`, `fub_update_lead`, `fub_create_task`, `fub_create_lead`, `fub_log_call` (write — skills always confirm before writing).
 
 **Server-hosted voice + business profile.** An agent's brand voice and business profile can be served straight from the connector via `get_my_profile`, set server-side by STOYC during onboarding. This means a client's voice (tone, conventions) and business facts (brokerage, areas, niche, average commission %, rules) can be baked into their connector with **no files on the client's machine** — content sounds like them and skills get business context without the agent setting anything up locally.
 

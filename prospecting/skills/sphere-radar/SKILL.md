@@ -49,7 +49,7 @@ Load voice + rules, then settle the inputs:
   facts + rules. Fall back to `voice-profile.md` (voice) and `CLAUDE.md` (rules) in the working
   folder; if voice is missing, write warmly and plain and suggest **learn-my-voice**.
 - **Find the people.** In order: (1) a **Google Sheet** the agent names — read names + companies (and
-  any title/city/email columns); (2) the **CRM** sphere via `fub_list_contacts` / `fub_search_contacts`
+  any title/city/email columns); (2) the **CRM** sphere via `fub_list_leads` / `fub_search_contacts`
   (past clients, SOI tags, referral partners); (3) if neither is available, ask the agent to paste a
   list. Confirm which source before running.
 - **Set the window.** Default to the **past 7 days**. Honor a different window if the agent asks
